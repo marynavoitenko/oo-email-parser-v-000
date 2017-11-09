@@ -11,7 +11,6 @@ class EmailParser
   end
 
   def parse
-    @emails.split(",").each {|e| @@parsed_emails << e.strip! if !(e == "")}
-    @@parsed_emails
+    @emails.split(/\s*,\s*/)
   end
 end
